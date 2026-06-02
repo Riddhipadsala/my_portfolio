@@ -4,37 +4,57 @@ import profile from './assets/Riddhi_pic.jpeg'
 function App() {
   const [navOpen, setNavOpen] = useState(false)
 
+  const navItems = [
+    { label: 'About', href: '#about' },
+    { label: 'Skills', href: '#skills' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Contact', href: '#contact' },
+  ]
+
   return (
     <>
     <div className="bg-slate-950 text-slate-100 antialiased">
       <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.16),_transparent_32%),linear-gradient(180deg,_#020617_0%,_#050f24_100%)]">
         <header className="mx-auto flex max-w-7xl flex-col gap-6 px-6 py-8 sm:px-8 lg:px-12">
-            <nav className="sticky top-0 z-10 rounded-3xl border border-slate-800 bg-slate-900/80 px-6 py-3 shadow-lg shadow-slate-950/20 backdrop-blur transition">
-              <div className="flex items-center justify-between gap-4">
-                <a href="#home" className="text-xl font-semibold tracking-tight text-white">MyPortfolio</a>
-                <button
-                  type="button"
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-700 bg-slate-950/70 text-slate-300 transition hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-cyan-400 sm:hidden"
-                  aria-expanded={navOpen}
-                  aria-label="Toggle navigation"
-                  onClick={() => setNavOpen((open) => !open)}
-                >
-                  <span className="sr-only">Toggle navigation</span>
-                  <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    {navOpen ? (
-                      <path d="M18 6L6 18M6 6l12 12" />
-                    ) : (
-                      <path d="M4 7h16M4 12h16M4 17h16" />
-                    )}
-                  </svg>
-                </button>
-              </div>
+            <nav className="sticky top-0 z-10 rounded-3xl border border-slate-800 bg-slate-900/90 px-6 py-4 shadow-lg shadow-slate-950/20 backdrop-blur transition">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex items-center justify-between gap-4">
+                  <div>
+                    <a href="#home" className="text-xl font-semibold tracking-tight text-white">Riddhi Padsala</a>
+                    <p className="text-xs text-slate-400">Full Stack Developer</p>
+                  </div>
+                  <button
+                    type="button"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-700 bg-slate-950/70 text-slate-300 transition hover:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-cyan-400 sm:hidden"
+                    aria-expanded={navOpen}
+                    aria-label="Toggle navigation"
+                    onClick={() => setNavOpen((open) => !open)}
+                  >
+                    <span className="sr-only">Toggle navigation</span>
+                    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      {navOpen ? (
+                        <path d="M18 6L6 18M6 6l12 12" />
+                      ) : (
+                        <path d="M4 7h16M4 12h16M4 17h16" />
+                      )}
+                    </svg>
+                  </button>
+                </div>
 
-              <div className={`${navOpen ? 'block' : 'hidden'} mt-4 flex flex-col gap-3 text-sm text-slate-300 sm:flex-row sm:flex-wrap sm:items-center sm:justify-end sm:gap-20 sm:mt-0 sm:block`}>
-                <a href="#about" className="rounded-2xl px-4 py-2 transition hover:text-white hover:bg-slate-900/70 sm:px-0 sm:py-0">About</a>
-                <a href="#skills" className="rounded-2xl px-4 py-2 transition hover:text-white hover:bg-slate-900/70 sm:px-0 sm:py-0">Skills</a>
-                <a href="#projects" className="rounded-2xl px-4 py-2 transition hover:text-white hover:bg-slate-900/70 sm:px-0 sm:py-0">Projects</a>
-                <a href="#contact" className="rounded-2xl px-4 py-2 transition hover:text-white hover:bg-slate-900/70 sm:px-0 sm:py-0">Contact</a>
+                <div className={`${navOpen ? 'block' : 'hidden'} sm:block`}>
+                  <div className="flex flex-col gap-3 text-sm text-slate-300 sm:flex-row sm:items-center sm:gap-8">
+                    {navItems.map((item) => (
+                      <a
+                        key={item.href}
+                        href={item.href}
+                        onClick={() => setNavOpen(false)}
+                        className="rounded-2xl px-4 py-2 transition hover:text-white hover:bg-slate-900/70 sm:px-0 sm:py-0"
+                      >
+                        {item.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
               </div>
             </nav>
 
