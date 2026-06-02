@@ -5,6 +5,7 @@ function App() {
   const [navOpen, setNavOpen] = useState(false)
 
   return (
+    <>
     <div className="bg-slate-950 text-slate-100 antialiased">
       <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.16),_transparent_32%),linear-gradient(180deg,_#020617_0%,_#050f24_100%)]">
         <header className="mx-auto flex max-w-7xl flex-col gap-6 px-6 py-8 sm:px-8 lg:px-12">
@@ -220,7 +221,7 @@ function App() {
                         <div className="space-y-6 p-8">
                             <div className="space-y-4">
                                 <h3 className="text-2xl font-semibold text-white">HireChef Platform</h3>
-                                <p className="text-slate-400">A Laravel-based platform for chef hiring and management with modern UI and backend functionality.</p>
+                                <p className="text-slate-400">A Laravel-based platform for chef hiring and management with modern UI and backend functionality with Ai chatbot and that integrate with the flowise ai tool.</p>
                             </div>
                             <div className="flex flex-wrap gap-2">
                                 <span className="rounded-full border border-slate-700 bg-slate-950/80 px-3 py-1 text-xs uppercase tracking-[0.28em] text-slate-300">Laravel</span>
@@ -282,7 +283,7 @@ function App() {
             </section>
         </main>
       </div>
-    </body>
+    </div>
     </>
   )
 }
