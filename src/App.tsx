@@ -422,7 +422,7 @@ function App() {
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div className="rounded-3xl border border-slate-800 bg-slate-950/90 p-5 text-slate-300 shadow-sm shadow-slate-950/10">
                       <p className="text-sm uppercase tracking-[0.28em] text-cyan-300">Email</p>
-                      <p className="mt-3 text-lg font-semibold text-white">riddhpadsala52@gmail.com</p>
+                      <p className="mt-3 text-lg font-semibold text-white">riddhipadsala52@gmail.com</p>
                     </div>
                     <div className="rounded-3xl border border-slate-800 bg-slate-950/90 p-5 text-slate-300 shadow-sm shadow-slate-950/10">
                       <p className="text-sm uppercase tracking-[0.28em] text-cyan-300">Phone</p>
