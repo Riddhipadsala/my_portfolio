@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import profile from './assets/Riddhi_pic.jpeg';
+import { Helmet } from 'react-helmet-async';
 
 function App() {
   const [navOpen, setNavOpen] = useState(false)
@@ -29,6 +30,7 @@ function App() {
 
   return (
     <>
+    <Helmet>
       <div className="bg-slate-950 text-slate-100 antialiased">
         <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.16),_transparent_32%),linear-gradient(180deg,_#020617_0%,_#050f24_100%)]">
           <header className="mx-auto flex max-w-7xl flex-col gap-6 px-6 py-8 sm:px-8 lg:px-12">
@@ -110,7 +112,7 @@ function App() {
                 <div className="relative mx-auto w-full max-w-[32rem]">
                   <div className="relative overflow-hidden rounded-[2rem] border border-slate-700 bg-slate-950/90 p-3 shadow-[0_0_60px_rgba(56,189,248,0.18)] sm:p-4">
                     <div className="overflow-hidden rounded-[1.75rem] bg-slate-900">
-                      <img src={profile} alt="Profile picture of Riddhi Padsala" className="h-[28rem] w-full object-cover object-center sm:h-[22rem]" />
+                      <img src={profile} alt="Riddhi Padsala - Full Stack Laravel Developer" className="h-[28rem] w-full object-cover object-center sm:h-[22rem]" />
                     </div>
                   </div>
                   <div className="mt-6 rounded-3xl border border-slate-800 bg-slate-950/90 p-5 text-center text-slate-300 shadow-xl shadow-slate-950/20 sm:mt-8">
@@ -422,7 +424,7 @@ function App() {
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div className="rounded-3xl border border-slate-800 bg-slate-950/90 p-5 text-slate-300 shadow-sm shadow-slate-950/10">
                       <p className="text-sm uppercase tracking-[0.28em] text-cyan-300">Email</p>
-                      <p className="mt-3 text-lg font-semibold text-white">riddhpadsala52@gmail.com</p>
+                      <p className="mt-3 text-lg font-semibold text-white">riddhipadsala52@gmail.com</p>
                     </div>
                     <div className="rounded-3xl border border-slate-800 bg-slate-950/90 p-5 text-slate-300 shadow-sm shadow-slate-950/10">
                       <p className="text-sm uppercase tracking-[0.28em] text-cyan-300">Phone</p>
@@ -484,6 +486,7 @@ function App() {
           </main>
         </div>
       </div>
+    </Helmet>
     </>
   )
 }
