@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import profile from './assets/Riddhi_pic.jpeg';
 import { Helmet } from 'react-helmet-async';
 
 function App() {
@@ -115,9 +114,9 @@ function App() {
             <div className="relative isolate flex items-center justify-center overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-900/80 p-2 shadow-2xl shadow-slate-950/30 sm:p-10">
               <div className="absolute inset-x-0 top-0 bg-cyan-500/10 blur-3xl" aria-hidden="true"></div>
               <div className="relative mx-auto w-full max-w-[32rem]">
-                <div className="relative overflow-hidden rounded-[2rem] border border-slate-700 bg-slate-950/90 p-3 shadow-[0_0_60px_rgba(56,189,248,0.18)] sm:p-4">
+                <div className="relative overflow-hidden rounded-[2rem] border border-slate-700 bg-slate-950/90 p-4 shadow-[0_0_60px_rgba(56,189,248,0.18)] sm:p-4">
                   <div className="overflow-hidden rounded-[1.75rem] bg-slate-900">
-                    <img src={profile} alt="Riddhi Padsala - Full Stack Laravel Developer" className="h-[28rem] w-full object-cover object-center sm:h-[22rem]" />
+                    <img src="./riddhi_pic2.png" alt="Riddhi Padsala - Full Stack Laravel Developer" className="h-[8rem] w-full object-cover object-center sm:h-[15rem]" />
                   </div>
                 </div>
                 <div className="mt-6 rounded-3xl border border-slate-800 bg-slate-950/90 p-5 text-center text-slate-300 shadow-xl shadow-slate-950/20 sm:mt-8">
